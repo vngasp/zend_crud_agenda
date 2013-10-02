@@ -1,0 +1,42 @@
+		
+<table class="table table-bordered">
+	
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Sobrenome</th>
+			<th>E-mail</th>
+			<th>Fone</th>
+			<th>Celular</th>
+			<th>Última Alteração</th>
+			<th>Alterar</th>
+			<th>Excluir</th>
+		</tr>
+	</thead>
+	<tbody>
+
+		<?php
+
+			foreach ($this->contato as $c) {
+				echo "<tr>";
+
+					echo "<td>{$c['nome']}</td>";
+					echo "<td>{$c['sobrenome']}</td>";
+					echo "<td>{$c['email']}</td>";
+					echo "<td>{$c['fone']}</td>";
+					echo "<td>{$c['celular']}</td>";
+					echo "<td>{$c['dataalt']}</td>";
+
+					echo "<td><a href='update/id/ {$c['id']}' class='btn btn-primary btn-small'><i class='icon-refresh icon-white'></i></a></td>";
+
+					echo "<td><a href='delete/id/ {$c['id']}' class='btn btn-danger btn-small'><i class='icon-remove-circle icon-white'></i></a></td>";
+
+				echo "</tr>";
+
+			}
+
+		?>
+		
+	</tbody>
+
+</table>
